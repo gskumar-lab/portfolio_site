@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,37 +9,46 @@
   <script src="./js/script.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
+
 <body data-theme="dark">
   <!-- Dark/Light Mode Toggle -->
   <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">
-    <i class="fas fa-sun"></i> <!-- Changed to sun icon for dark mode -->
+    <i class="fas fa-sun"></i>
+    <!-- Changed to sun icon for dark mode -->
   </button>
-
-
   <!-- Navbar -->
   <nav>
     <ul>
-      <li><a href="#" class="home-button">GSKUMAR</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li>
+        <a href="#" class="home-button">GSKUMAR</a>
+      </li>
+      <li>
+        <a href="#skills">Skills</a>
+      </li>
+      <li>
+        <a href="#certifications">Certifications</a>
+      </li>
+      <li>
+        <a href="#projects">Projects</a>
+      </li>
+      <li>
+        <a href="#education">Education</a>
+      </li>
+      <li>
+        <a href="#experience">Experience</a>
+      </li>
+      <li>
+        <a href="#contact">Contact</a>
+      </li>
     </ul>
   </nav>
-
   <!-- Header -->
   <header>
     <h1>SanthoshKumar G</h1>
     <p>Cloud & DevOps Engineer | Automating Scalable Solutions</p>
   </header>
-
   <!-- Divider -->
   <hr class="section-divider">
-
-
-
   <!-- Main Content -->
   <main>
     <!-- Skills -->
@@ -47,29 +57,48 @@
       <div class="skill-category">
         <h3>Cloud Platforms</h3>
         <div class="skills-grid">
-          <div class="skill"><i class="fab fa-aws"></i><p>AWS</p></div>
+          <div class="skill">
+            <i class="fab fa-aws"></i>
+            <p>AWS</p>
+          </div>
         </div>
       </div>
       <div class="skill-category">
         <h3>DevOps Tools</h3>
         <div class="skills-grid">
-          <div class="skill"><i class="fab fa-docker"></i><p>Docker</p></div>
-          <div class="skill"><i class="fas fa-tools"></i><p>Terraform</p></div>
-          <div class="skill"><i class="fa-brands fa-git-alt"></i><p>Git</p></div>
-          <div class="skill"><i class="fab fa-docker"></i><p>Docker</p></div>
-          <div class="skill"><i class="fas fa-tools"></i><p>Terraform</p></div>
-          <div class="skill"><i class="fa-brands fa-git-alt"></i><p>Git</p></div>
+          <div class="skill">
+            <i class="fab fa-docker"></i>
+            <p>Docker</p>
+          </div>
+          <div class="skill">
+            <i class="fas fa-tools"></i>
+            <p>Terraform</p>
+          </div>
+          <div class="skill">
+            <i class="fa-brands fa-git-alt"></i>
+            <p>Git</p>
+          </div>
+          <div class="skill">
+            <i class="fa-brands fa-github"></i>
+            <p>Github Actions</p>
+          </div>
+                      
         </div>
       </div>
       <div class="skill-category">
         <h3>Programming & Scripting</h3>
         <div class="skills-grid">
-          <div class="skill"><i class="fab fa-python"></i><p>Python</p></div>
-          <div class="skill"><i class="fa-brands fa-linux"></i><p>Shell scripting</p></div>
+          <div class="skill">
+            <i class="fab fa-python"></i>
+            <p>Python</p>
+          </div>
+          <div class="skill">
+            <i class="fa-brands fa-linux"></i>
+            <p>Shell scripting</p>
+          </div>
         </div>
       </div>
     </section>
-
     <!-- Certifications -->
     <section id="certifications">
       <h2>Certifications</h2>
@@ -78,49 +107,37 @@
           <img src="./images/aws-certified1.png" alt="AWS Certified Solutions Architect" class="cert-image">
           <p class="cert-title">AWS Certified Solutions Architect Associate</p>
         </div>
-		
-		
-		<!--		
+        <!--		
 		
         <div class="cert-item">
           <img src="./images/aws-certified2.png" alt="Docker Certified Associate" class="cert-image">
           <p class="cert-title">Docker Certified Associate</p>
         </div>
-        <div class="cert-item">
-          <img src="./images/aws-certified3.png" alt="Certified Kubernetes Administrator" class="cert-image">
-          <p class="cert-title">Certified Kubernetes Administrator</p>
-        </div>
-        <div class="cert-item">
-          <img src="./images/aws-certified4.png" alt="AWS Certified Solutions Architect" class="cert-image">
-          <p class="cert-title">AWS Certified Solutions Architect</p>
-        </div>
-        
+                
 		-->
-		
       </div>
     </section>
-
     <!-- Projects -->
     <section id="projects">
       <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project">
-          <h3>CI/CD Pipeline for Microservices</h3>
-          <p>Designed and implemented a CI/CD pipeline using Jenkins, Docker, and Kubernetes.</p>
-          <a href="project1.html" class="btn">View Project</a>
-        </div>
-        <div class="project">
-          <h3>Cloud Migration Strategy</h3>
-          <p>Migrated on-premise infrastructure to AWS with zero downtime.</p>
-          <a href="project2.html" class="btn">View Project</a>
-        </div>
-        <div class="project">
-          <h3>CI/CD Pipeline for Microservices</h3>
-          <p>Designed and implemented a CI/CD pipeline using Jenkins, Docker, and Kubernetes.</p>
-          <a href="project1.html" class="btn">View Project</a>
-        </div>
-		
-		<!--
+      <div class="projects-container">
+        <div class="projects-grid">
+          <div class="project">
+            <h3>CI/CD Pipeline for Microservices</h3>
+            <p>Designed and implemented a CI/CD pipeline using Jenkins, Docker, and Kubernetes.</p>
+            <a href="project1.html" class="btn">View Project</a>
+          </div>
+          <div class="project">
+            <h3>Cloud Migration Strategy</h3>
+            <p>Migrated on-premise infrastructure to AWS with zero downtime.</p>
+            <a href="project2.html" class="btn">View Project</a>
+          </div>
+          <div class="project">
+            <h3>CI/CD Pipeline for Microservices</h3>
+            <p>Designed and implemented a CI/CD pipeline using Jenkins, Docker, and Kubernetes.</p>
+            <a href="project1.html" class="btn">View Project</a>
+          </div>
+          <!--
 		
         <div class="project">
           <h3>CI/CD Pipeline for Microservices</h3>
@@ -134,52 +151,55 @@
         </div>
         
 		-->
-		
+        </div>
       </div>
     </section>
-
     <!-- Education -->
     <section id="education">
       <h2>Education</h2>
       <div class="education-container">
-      <div class="education-grid">
-          <div class="education-item">
-            <h4>University of Tech</h4>
-            <p>Bachelor of Science in Computer Science</p>
-            <p>Graduated: May 2018</p>
+        <div class="education-grid">
+          
+		  <div class="education-item">
+			<h3>Bachelor of Engineering - Computer Science and Engineering</h3>
+			<h4>Syed Ammal Engineering College</h4>
+            <p>Affiliated with Anna University, Chennai</p>
+            <p>June 2013 - May 2016</p>
           </div>
-          <div class="education-item">
-            <h3>University of Tech</h3>
-            <p>Bachelor of Science in Computer Science</p>
-            <p>Graduated: May 2018</p>
+		  
+		  <div class="education-item">
+			<h3>Diploma - Electronics and Communication Engineering</h3>
+			<h4>Mohamed Sathak Polytechnic</h4>
+            <p>Affiliated with Department of Technical Education, Tamil Nadu</p>
+            <p>June 2010 - May 2012</p>
           </div>
-		</div>
+		  
+		  
+        </div>
       </div>
     </section>
-
     <!-- Work Experience -->
     <section id="experience">
       <h2>Work Experience</h2>
       <div class="experience-container">
-      <div class="experience-grid">
+        <div class="experience-grid">
           <div class="experience-item">
             <h3>Senior Operations Associate</h3>
-            <p>Tech Corp Inc. | Jan 2020 - Present</p>
+            <p>Genpact India | </p>
             <ul>
               <li>Designed and maintained cloud infrastructure on AWS.</li>
               <li>Automated deployment processes using Terraform and Ansible.</li>
             </ul>
           </div>
           <div class="experience-item">
-            <h3>Senior DevOps Engineer</h3>
-            <p>Tech Corp Inc. | Jan 2020 - Present</p>
+            <h3>Senior Operations Associate</h3>
+            <p> | </p>
             <ul>
               <li>Designed and maintained cloud infrastructure on AWS.</li>
               <li>Automated deployment processes using Terraform and Ansible.</li>
             </ul>
           </div>
-		  
-		  <!--
+          <!--
 		  
           <div class="experience-item">
             <h3>Senior DevOps Engineer</h3>
@@ -191,26 +211,25 @@
           </div>
 		  
 		  -->
-		  
+        </div>
       </div>
-      </div>
-
     </section>
-
     <!-- Contact Information -->
     <section id="contact" class="contact-section">
       <h2>Contact Me</h2>
       <div class="contact-details">
-        <p>Email: <a href="mailto:gskumar25792@gmail.com" class="contact-link">gskumar25792@gmail.com</a></p>
-        <p>Phone: <a href="tel:+919042244219" class="contact-link">+91 9042244219</a></p>
+        <p>Email:
+          <a href="mailto:gskumar25792@gmail.com" class="contact-link">gskumar25792@gmail.com</a>
+        </p>
+        <p>Phone:
+          <a href="tel:+919042244219" class="contact-link">+91 9042244219</a>
+        </p>
         <p>Location: Chennai, Tamil Nadu</p>
         <p>Available for: Full-time opportunities around India</p>
         <a href="resume.pdf" download class="download-btn">Download Resume</a>
-
       </div>
     </section>
   </main>
-
   <!-- Footer -->
   <footer>
     <div class="social-icons">
@@ -220,4 +239,5 @@
     </div>
   </footer>
 </body>
+
 </html>
