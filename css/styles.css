@@ -387,13 +387,16 @@ footer {
 
 
 /* Project Page Specific Styles */
+
 .project-header {
-  background: linear-gradient(135deg, rgba(0, 122, 204, 0.8) 0%, rgba(0, 170, 255, 0.6) 100%); 
+
+  background: #1a1a1a;  /* Solid dark background */
   color: white;
   padding: 80px 20px;
   text-align: center;
   margin-bottom: 60px;
 }
+
 
 .project-header-content {
   max-width: 800px;
@@ -406,6 +409,7 @@ footer {
 }
 
 .project-meta {
+  
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -414,6 +418,7 @@ footer {
 }
 
 .project-meta span, .project-meta a {
+
   display: flex;
   align-items: center;
   gap: 8px;
@@ -436,6 +441,7 @@ footer {
 .project-links {
   margin-bottom: 60px;
 }
+
 
 .tech-grid {
   display: grid;
