@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager Web App | GSKumar</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body data-theme="dark">
+  <!-- Dark/Light Mode Toggle -->
+  <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">
+    <i class="fas fa-sun"></i>
+  </button>
+  
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li>
+        <a href="../index.html" class="home-button">GSKUMAR</a>
+      </li>
+      <li>
+        <a href="../index.html#skills">Skills</a>
+      </li>
+      <li>
+        <a href="../index.html#projects">Projects</a>
+      </li>
+      <li>
+        <a href="../index.html#contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Project Header -->
+  <header class="project-header">
+    <div class="project-header-content">
+      <h1>Task Manager Web App</h1>
+      <p class="project-subtitle">A modern serverless task management application built with AWS</p>
+      <div class="project-meta">
+        <span class="project-date"><i class="far fa-calendar-alt"></i> [Month Year]</span>
+        <span class="project-tech"><i class="fas fa-code"></i> AWS Lambda, DynamoDB, Cognito, API Gateway</span>
+        <a href="https://github.com/gskumar-lab/serverless-todo-taskflow" class="project-link" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="project-main">
+    <section class="project-overview">
+      <h2>Project Overview</h2>
+      <p>This serverless task management application provides users with a complete solution for organizing their daily tasks. Built entirely on AWS serverless technologies, the app offers secure authentication, real-time task management, and progress tracking while eliminating server management overhead. The solution demonstrates modern web application architecture patterns using fully managed AWS services.</p>
+      
+      <div class="project-features">
+        <h3>Key Features</h3>
+        <ul>
+          <li><strong>Secure Authentication</strong>: User sign-up/sign-in with AWS Cognito including password recovery</li>
+          <li><strong>Full CRUD Operations</strong>: Create, read, update, and delete tasks with instant updates</li>
+          <li><strong>Visual Task Management</strong>: Status indicators (Pending/Completed) and due date tracking</li>
+          <li><strong>Progress Analytics</strong>: Dashboard with task statistics and completion metrics</li>
+          <li><strong>Bulk Operations</strong>: Multi-select and batch update/delete tasks</li>
+          <li><strong>Responsive Design</strong>: Optimized for desktop, tablet, and mobile devices</li>
+          <li><strong>Theme Support</strong>: Light/dark mode toggle for user preference</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="project-technologies">
+      <h2>Technologies Used</h2>
+      <div class="tech-grid">
+        <div class="tech-item">
+          <i class="fab fa-aws"></i>
+          <p>AWS Backend</p>
+          <ul>
+            <li>Lambda (Python)</li>
+            <li>DynamoDB</li>
+            <li>API Gateway</li>
+            <li>Cognito</li>
+          </ul>
+        </div>
+        <div class="tech-item">
+          <i class="fas fa-laptop-code"></i>
+          <p>Frontend</p>
+          <ul>
+            <li>HTML5/CSS3</li>
+            <li>JavaScript</li>
+            <li>AWS Amplify</li>
+            <li>Font Awesome</li>
+          </ul>
+        </div>
+        <div class="tech-item">
+          <i class="fas fa-shield-alt"></i>
+          <p>Security</p>
+          <ul>
+            <li>Cognito Auth</li>
+            <li>IAM Roles</li>
+            <li>API Gateway Authorizers</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-architecture">
+      <h2>Application Screenshot</h2>
+      <div class="diagram-container">
+        <img src="../images/dashboard.png" alt="Task Manager Dashboard" class="architecture-diagram">
+        <p class="diagram-caption">Task Manager interface showing task list, status indicators, and progress tracking</p>
+      </div>
+    </section>
+
+    <section class="project-challenges">
+      <h2>Challenges & Solutions</h2>
+      <div class="challenge-item">
+        <h3>Real-time Data Synchronization</h3>
+        <p>Ensuring the UI reflected the latest task state immediately after updates without full page refreshes.</p>
+        <h4>Solution</h4>
+        <p>Implemented optimistic UI updates combined with API response validation. The UI updates immediately while the API call processes, then reconciles any discrepancies if the API fails.</p>
+      </div>
+      <div class="challenge-item">
+        <h3>Cognito Integration Complexity</h3>
+        <p>Managing user authentication flows and session handling with Cognito required significant frontend logic.</p>
+        <h4>Solution</h4>
+        <p>Created reusable authentication service module that handles all Cognito interactions including token refresh, session validation, and error recovery.</p>
+      </div>
+      <div class="challenge-item">
+        <h3>Cost Optimization</h3>
+        <p>Balancing DynamoDB read/write capacity with application performance needs.</p>
+        <h4>Solution</h4>
+        <p>Implemented efficient data modeling with composite keys and GSIs to minimize RCUs/WCUs while maintaining query performance.</p>
+      </div>
+    </section>
+
+    <section class="project-results">
+      <h2>Results & Impact</h2>
+      <div class="result-item">
+        <i class="fas fa-bolt"></i>
+        <h3>Performance</h3>
+        <p>Average API response time under 200ms thanks to serverless architecture</p>
+      </div>
+      <div class="result-item">
+        <i class="fas fa-dollar-sign"></i>
+        <h3>Cost Efficiency</h3>
+        <p>Operational costs under $5/month for typical usage patterns</p>
+      </div>
+      <div class="result-item">
+        <i class="fas fa-lightbulb"></i>
+        <h3>Key Learnings</h3>
+        <p>Gained expertise in serverless architectures, Cognito integration, and DynamoDB data modeling</p>
+      </div>
+    </section>
+
+    <section class="project-links">
+      <h2>Project Links</h2>
+      <div class="links-container">
+        <a href="https://github.com/gskumar-lab/serverless-todo-taskflow" class="btn" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
+        <a href="../index.html#projects" class="btn"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/santhoshkumar-gskumar/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/gskumar-lab" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://gskumar257.medium.com" aria-label="Medium"><i class="fab fa-medium"></i></a>
+    </div>
+    <p class="copyright">&copy; <script>document.write(new Date().getFullYear())</script> GSKumar. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

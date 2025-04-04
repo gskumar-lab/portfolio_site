@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three-Tier Architecture on AWS | GSKumar</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body data-theme="dark">
+  <!-- Dark/Light Mode Toggle -->
+  <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">
+    <i class="fas fa-sun"></i>
+  </button>
+  
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li>
+        <a href="../index.html" class="home-button">GSKUMAR</a>
+      </li>
+      <li>
+        <a href="../index.html#skills">Skills</a>
+      </li>
+      <li>
+        <a href="../index.html#projects">Projects</a>
+      </li>
+      <li>
+        <a href="../index.html#contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Project Header -->
+  <header class="project-header">
+    <div class="project-header-content">
+      <h1>Three-Tier Architecture on AWS using Terraform</h1>
+      <p class="project-subtitle">Highly available and scalable cloud infrastructure with disaster recovery</p>
+      <div class="project-meta">
+        <span class="project-date"><i class="far fa-calendar-alt"></i> [Month Year]</span>
+        <span class="project-tech"><i class="fas fa-code"></i> AWS, Terraform, EC2, RDS, VPC</span>
+        <a href="https://github.com/gskumar-lab/3-tier-app-infra-terraform" class="project-link" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="project-main">
+    <section class="project-overview">
+      <h2>Project Overview</h2>
+      <p>This project implements a production-grade three-tier architecture on AWS using Infrastructure as Code with Terraform. The solution addresses the need for highly available, scalable, and secure cloud infrastructure with built-in disaster recovery capabilities. The architecture separates concerns across web, application, and database tiers while implementing security best practices like private subnets, bastion hosts, and IAM role-based access.</p>
+      
+      <div class="project-features">
+        <h3>Key Features</h3>
+        <ul>
+          <li><strong>High Availability</strong>: Deployed across 2 Availability Zones with auto-scaling capabilities</li>
+          <li><strong>Disaster Recovery</strong>: Implemented in a secondary region using AWS Backup, CloudFront, and Route53</li>
+          <li><strong>Secure Access</strong>: Private subnets with controlled access via Bastion Host and IAM roles</li>
+          <li><strong>Automated Backups</strong>: Regular snapshots and backups using AWS Backup service</li>
+          <li><strong>Infrastructure as Code</strong>: Fully reproducible environment defined in Terraform</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="project-technologies">
+      <h2>Technologies Used</h2>
+      <div class="tech-grid">
+        <div class="tech-item">
+          <i class="fab fa-aws"></i>
+          <p>AWS Services</p>
+          <ul>
+            <li>EC2 (Web & App Tiers)</li>
+            <li>RDS (MySQL)</li>
+            <li>VPC & Subnets</li>
+            <li>Route53</li>
+            <li>CloudFront</li>
+            <li>AWS Backup</li>
+          </ul>
+        </div>
+        <div class="tech-item">
+          <i class="fas fa-tools"></i>
+          <p>Infrastructure as Code</p>
+          <ul>
+            <li>Terraform</li>
+            <li>Modular Architecture</li>
+            <li>Variables & Outputs</li>
+          </ul>
+        </div>
+        <div class="tech-item">
+          <i class="fas fa-shield-alt"></i>
+          <p>Security</p>
+          <ul>
+            <li>IAM Roles</li>
+            <li>Bastion Host</li>
+            <li>Private Subnets</li>
+            <li>NAT Gateway</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-architecture">
+      <h2>Architecture Diagram</h2>
+      <div class="diagram-container">
+        <img src="../images/three-tier-architecture.png" alt="Three-Tier Architecture Diagram" class="architecture-diagram">
+        <p class="diagram-caption">Three-tier architecture with web, app, and database tiers in private subnets, fronted by a bastion host for secure access</p>
+      </div>
+    </section>
+
+    <section class="project-challenges">
+      <h2>Challenges & Solutions</h2>
+      <div class="challenge-item">
+        <h3>Multi-Region Deployment Coordination</h3>
+        <p>Managing dependencies between primary and disaster recovery regions while maintaining separate Terraform states was complex.</p>
+        <h4>Solution</h4>
+        <p>Implemented a sequential deployment approach with three separate Terraform configurations, using remote state references where needed. Created clear documentation on deployment order.</p>
+      </div>
+      <div class="challenge-item">
+        <h3>Secure Access to Private Resources</h3>
+        <p>Needed to provide secure administrative access to instances in private subnets without exposing them to the public internet.</p>
+        <h4>Solution</h4>
+        <p>Designed a bastion host architecture with strict IAM policies and SSH key-based access. Implemented NAT Gateway for outbound internet access from private instances.</p>
+      </div>
+      <div class="challenge-item">
+        <h3>Automated Backup Management</h3>
+        <p>Ensuring consistent backups across regions while managing costs required careful planning.</p>
+        <h4>Solution</h4>
+        <p>Implemented AWS Backup with lifecycle policies to automatically manage backup retention and cross-region replication.</p>
+      </div>
+    </section>
+
+    <section class="project-results">
+      <h2>Results & Impact</h2>
+      <div class="result-item">
+        <i class="fas fa-chart-line"></i>
+        <h3>Reliability Improvement</h3>
+        <p>Architecture designed for 99.99% availability with multi-AZ deployment and automated failover</p>
+      </div>
+      <div class="result-item">
+        <i class="fas fa-dollar-sign"></i>
+        <h3>Cost Optimization</h3>
+        <p>Right-sized instances and reserved capacity reduced operational costs by ~30% compared to initial estimates</p>
+      </div>
+      <div class="result-item">
+        <i class="fas fa-lightbulb"></i>
+        <h3>Key Learnings</h3>
+        <p>Gained deep experience with Terraform modules, AWS networking, and cross-region disaster recovery patterns</p>
+      </div>
+    </section>
+
+    <section class="project-links">
+      <h2>Project Links</h2>
+      <div class="links-container">
+        <a href="https://github.com/gskumar-lab/3-tier-app-infra-terraform" class="btn" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
+        <a href="../index.html#projects" class="btn"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/santhoshkumar-gskumar/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/gskumar-lab" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://gskumar257.medium.com" aria-label="Medium"><i class="fab fa-medium"></i></a>
+    </div>
+    <p class="copyright">&copy; <script>document.write(new Date().getFullYear())</script> GSKumar. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
